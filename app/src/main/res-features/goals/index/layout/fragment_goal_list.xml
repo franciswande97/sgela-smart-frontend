@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_canvas">
+
+    <TextView
+        android:id="@+id/tv_screen_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="56dp"
+        android:text="Goals"
+        android:textColor="@color/text_primary"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_create_goal"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:text="+ New Goal"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        android:textAllCaps="false"
+        app:cornerRadius="20dp"
+        app:backgroundTint="#26FFFFFF"
+        app:strokeColor="#33FFFFFF"
+        app:strokeWidth="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_screen_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_screen_title" />
+
+    <TextView
+        android:id="@+id/tv_screen_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="6dp"
+        android:text="Your active academic objectives"
+        android:textColor="@color/text_muted"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_screen_title" />
+
+    <ProgressBar
+        android:id="@+id/pb_goals_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/accent_primary"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_screen_subtitle" />
+
+    <TextView
+        android:id="@+id/tv_goals_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No goals found"
+        android:textColor="@color/text_muted"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_screen_subtitle" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_goals"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
+        android:clipToPadding="false"
+        android:paddingBottom="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_screen_subtitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

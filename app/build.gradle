@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.openapi.generator)
 }
 
 android {
@@ -29,6 +30,58 @@ android {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
+
+    sourceSets {
+        main {
+            java.srcDirs += "$buildDir/generated/openapi/src/main/java"
+            res.srcDirs = [
+                'src/main/res',
+                'src/main/res-features/auth',
+                'src/main/res-features/goals/index',
+                'src/main/res-features/goals/detail',
+                'src/main/res-features/goals/materials',
+                'src/main/res-features/tasks/index',
+                'src/main/res-features/tasks/detail/base',
+                'src/main/res-features/tasks/detail/quiz',
+                'src/main/res-features/tasks/detail/focus',
+                'src/main/res-features/tasks/detail/prompt',
+                'src/main/res-features/tasks/detail/checklist'
+            ]
+        }
+    }
+}
+
+openApiGenerate {
+    generatorName = "java"
+    library = "retrofit2"
+    inputSpec = "$projectDir/src/main/openapi/openapi.json"
+    outputDir = "$buildDir/generated/openapi"
+    apiPackage = "com.project.sgelasmart.api.service"
+    modelPackage = "com.project.sgelasmart.api.model"
+    invokerPackage = "com.project.sgelasmart.api.client"
+
+    generateApiDocumentation = false
+    generateModelDocumentation = false
+    generateApiTests = false
+    generateModelTests = false
+
+    // Generate APIs, Models, and only the minimal string/collection helpers
+    globalProperties = [
+        apis: "",
+        models: "",
+        supportingFiles: "CollectionFormats.java,StringUtil.java"
+    ]
+
+    configOptions = [
+        dateLibrary         : "java8",
+        serializationLibrary: "gson",
+        useRxJava3          : "false",
+        useCoroutines       : "false"
+    ]
+}
+
+tasks.named('preBuild') {
+    dependsOn tasks.named('openApiGenerate')
 }
 
 dependencies {
@@ -36,6 +89,22 @@ dependencies {
     implementation libs.appcompat
     implementation libs.constraintlayout
     implementation libs.material
+
+    // Networking
+    implementation libs.retrofit
+    implementation libs.retrofit.converter.gson
+    implementation libs.retrofit.converter.scalars
+    implementation libs.okhttp
+    implementation libs.okhttp.logging
+
+    // Serialization: Gson
+    implementation libs.gson
+
+    // Swagger & Nullability Annotations
+    implementation libs.swagger.annotations
+    implementation libs.jsr305
+    implementation libs.javax.annotation
+
     testImplementation libs.junit
     androidTestImplementation libs.espresso.core
     androidTestImplementation libs.ext.junit

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#161B22">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:background="#30363D" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create New Goal"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Choose your objective template and timeline."
+            android:textColor="#8B949E"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="GOAL TITLE"
+            android:textColor="#8B949E"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_goal_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_input_field"
+            android:hint="e.g. Operating Systems Final Exam"
+            android:paddingHorizontal="14dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#484F58"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="TARGET DEADLINE"
+            android:textColor="#8B949E"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_pick_deadline"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_input_field"
+            android:gravity="center_vertical"
+            android:hint="Select completion date (YYYY-MM-DD)"
+            android:paddingHorizontal="14dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#484F58"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="GOAL ARCHETYPE"
+            android:textColor="#8B949E"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:columnCount="2"
+            android:rowCount="2">
+
+            <LinearLayout
+                android:id="@+id/card_tpl_exam"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_template_selected"
+                android:orientation="vertical"
+                android:padding="12dp">
+                <TextView
+                    android:id="@+id/tv_tpl_exam_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exam Prep"
+                    android:textColor="#58A6FF"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Active recall &amp; void slots"
+                    android:textColor="#8B949E"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/card_tpl_essay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_template_unselected"
+                android:orientation="vertical"
+                android:padding="12dp">
+                <TextView
+                    android:id="@+id/tv_tpl_essay_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Assignment"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Drafts &amp; research milestones"
+                    android:textColor="#8B949E"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/card_tpl_software"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/bg_template_unselected"
+                android:orientation="vertical"
+                android:padding="12dp">
+                <TextView
+                    android:id="@+id/tv_tpl_software_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Software Lab"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Architecture &amp; code sprints"
+                    android:textColor="#8B949E"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/card_tpl_custom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_template_unselected"
+                android:orientation="vertical"
+                android:padding="12dp">
+                <TextView
+                    android:id="@+id/tv_tpl_custom_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Custom Bare"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Freeform user tasks"
+                    android:textColor="#8B949E"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+        </GridLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_create_goal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_submit_create_goal"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="24dp"
+            android:text="Create Objective"
+            android:textAllCaps="false"
+            android:textColor="#0D0F12"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:backgroundTint="#FFFFFF"
+            app:cornerRadius="12dp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

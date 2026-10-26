@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_stage_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="ATTACH STUDY MATERIALS"
+        android:textColor="#8B949E"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_material_actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tv_stage_label">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_upload_pdf"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:text="Upload Doc/PDF"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:backgroundTint="#161B22"
+            app:cornerRadius="12dp"
+            app:strokeColor="#30363D"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_text"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:text="+ Paste Notes"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:backgroundTint="#161B22"
+            app:cornerRadius="12dp"
+            app:strokeColor="#30363D"
+            app:strokeWidth="1dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_empty_materials"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="28dp"
+        android:background="#161B22"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_material_actions">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_document"
+            app:tint="#8B949E" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="No study corpus attached"
+            android:textColor="#F0F6FC"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="Upload lecture slides, past exams, or paste summaries to ground Gemini."
+            android:textColor="#8B949E"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_materials"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp"
+        android:clipToPadding="false"
+        android:paddingBottom="12dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/bottom_action_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_material_actions" />
+
+    <FrameLayout
+        android:id="@+id/bottom_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_generate_plan"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Generate Study Plan"
+            android:textAllCaps="false"
+            android:textColor="#0D0F12"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:backgroundTint="#FFFFFF"
+            app:cornerRadius="14dp" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
