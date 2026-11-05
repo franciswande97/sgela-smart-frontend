@@ -1,0 +1,20 @@
+2026-11-05 16:39:34.571 [info] Agent Host process started successfully
+2026-11-05 16:39:34.631 [info] AgentService initialized
+2026-11-05 16:39:34.645 [info] Registering agent provider: copilotcli
+2026-11-05 16:39:34.726 [info] [WebSocketProtocol] Server listening on socket /tmp/vscode-ipc-582f75d5-0324-49bd-bdc2-b02cf4c47b91.sock
+2026-11-05 16:39:34.729 [info] [AgentHost] WebSocket server listening on /tmp/vscode-ipc-582f75d5-0324-49bd-bdc2-b02cf4c47b91.sock
+2026-11-05 16:39:34.784 [info] [AgentService] sessions_v2 import for provider copilotcli: 0 synchronized, 0 current, 0 excluded, 0 stale exclusions, 0 incomplete, 0 failed, marker set in 137ms (0 db opens, 0 db stats)
+2026-11-05 16:39:34.786 [info] [Copilot] Listing discoverable chats...
+2026-11-05 16:39:34.791 [info] [Copilot] Starting CopilotClient...
+2026-11-05 16:39:34.791 [info] [Copilot] Set CLI env: GITHUB_COPILOT_INTEGRATION_ID=code-oss
+2026-11-05 16:39:34.806 [info] [Copilot] Resolved runtime path: /usr/lib/code-server/lib/vscode/node_modules/@github/copilot-sdk-linux-x64/prebuilds/linux-x64/copilot-runtime
+2026-11-05 16:39:34.822 [info] [CommandAutoApprover] Tree-sitter initialized (bash=available, powershell=available)
+2026-11-05 16:39:34.847 [info] [Copilot] CopilotClient started successfully
+2026-11-05 16:39:34.897 [info] [Copilot] Listed 0 SDK session(s) for discoverable chats
+2026-11-05 16:39:34.899 [info] [Copilot] Chat discovery: 0 SDK session(s) -> 0 external, 0 adoptable legacy extension-host, 0 suppressed adoptable legacy extension-host, 0 suppressed archived legacy extension-host, 0 already known to Agent Host, 0 without a working directory, 0 with unsupported or missing client name, 0 outside the import window, 0 without repository metadata, 0 failed to classify (adopt legacy extension-host chats: false)
+2026-11-05 16:39:35.064 [info] [ProtocolServer] Initialize: clientId=9149aff9-eabe-44ef-a2c4-89dfd283a345, protocolVersions=[0.9.0, 0.7.0, 0.6.0, 0.5.2, 0.5.1]
+2026-11-05 16:39:35.191 [info] [AgentService] pruned 0 stale external session row(s) older than 30 days
+2026-11-05 16:43:23.572 [info] [ProtocolServer] Initialize: clientId=a3a40aa0-2709-48f9-9435-afec2621a4b3, protocolVersions=[0.9.0, 0.7.0, 0.6.0, 0.5.2, 0.5.1]
+2026-11-05 16:48:14.078 [info] [ProtocolServer] Client disconnected: a3a40aa0-2709-48f9-9435-afec2621a4b3, subscriptions=1
+2026-11-05 17:02:03.524 [info] [ProtocolServer] Initialize: clientId=1429e53a-a178-433a-9965-5e4e89f8e894, protocolVersions=[0.9.0, 0.7.0, 0.6.0, 0.5.2, 0.5.1]
+2026-11-05 17:02:03.747 [info] [ProtocolServer] Client disconnected: 1429e53a-a178-433a-9965-5e4e89f8e894, subscriptions=1

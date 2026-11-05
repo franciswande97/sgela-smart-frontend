@@ -1,0 +1,16 @@
+2026-11-05 17:25:24.875 [info] 
+
+
+
+
+2026-11-05 17:25:24.889 [info] [AgentHostChannel] Registered lazy IPC channel 'agentHostProxy' (upstream: /tmp/vscode-ipc-03536663-0aca-493d-8d81-d2bd6385575d.sock)
+2026-11-05 17:25:24.892 [info] Extension host agent started.
+2026-11-05 17:25:27.047 [info] [172.30.0.1][fddc9473][ManagementConnection] New connection established.
+2026-11-05 17:25:28.158 [info] [AgentHostChannel] Renderer ctx=[object Object] requested connect to upstream
+2026-11-05 17:25:28.490 [info] [172.30.0.1][6c2297d6][ExtensionHostConnection] New connection established.
+2026-11-05 17:25:28.491 [info] [172.30.0.1][6c2297d6][ExtensionHostConnection] Starting extension host process...
+2026-11-05 17:25:28.498 [info] [172.30.0.1][6c2297d6][ExtensionHostConnection] <63> Launched Extension Host Process.
+2026-11-05 17:25:28.822 [info] [172.30.0.1][6c2297d6][ExtensionHostConnection] <63> [reconnection-grace-time] Extension host: read VSCODE_RECONNECTION_GRACE_TIME=10800000ms (10800s)
+
+2026-11-05 17:25:28.920 [info] ServerAgentHostManager: agent host started
+2026-11-05 17:25:28.921 [info] [AgentHostChannel] Opening upstream to /tmp/vscode-ipc-03536663-0aca-493d-8d81-d2bd6385575d.sock

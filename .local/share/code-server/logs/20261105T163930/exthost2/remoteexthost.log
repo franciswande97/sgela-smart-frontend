@@ -1,0 +1,16 @@
+2026-11-05 16:43:38.886 [info] Extension host with pid 896 started
+2026-11-05 16:43:40.766 [info] Lock '/home/coder/.local/share/code-server/User/workspaceStorage/-2eb22008/vscode.lock': Lock acquired.
+2026-11-05 16:43:43.458 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2026-11-05 16:43:43.715 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2026-11-05 16:48:03.705 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2026-11-05 16:48:16.867 [error] Error: write EPIPE
+	at afterWriteDispatched (node:internal/stream_base_commons:159:15)
+	at writevGeneric (node:internal/stream_base_commons:142:3)
+	at Socket._writeGeneric (node:net:1256:11)
+	at Socket.connect (node:net:1236:12)
+	at Socket.wrapper (node:events:639:12)
+	at Socket.emit (node:events:526:24)
+	at PipeConnectWrap.afterConnect [as oncomplete] (node:net:2002:10)
+2026-11-05 16:48:23.014 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2026-11-05 16:48:23.110 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2026-11-05 16:48:39.952 [info] ExtensionService#_doActivateExtension vscode.terminal-suggest, startup: false, activationEvent: 'onTerminalShellIntegration:*'
